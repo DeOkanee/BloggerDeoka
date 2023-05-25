@@ -5,7 +5,7 @@
 }
 
 body {
-	background-image: url("/gambar/img/walpaper.jpg");
+	background-image: url('/gambar/img/wallhaven-6oxgp6.jpg');
 	background-repeat: no-repeat;
   	background-size: cover;
   	background-attachment: fixed;
@@ -249,6 +249,9 @@ a{
 }
 
 @media screen and (max-width: 1000px) {
+	body {
+		background-image: url("/gambar/img/walpaper.jpg");
+	}
 	#notification{
 		top: 10%;
 		width: 60%;
