@@ -5,7 +5,7 @@
 }
 
 body {
-	background-image: url('/gambar/img/wallhaven-6oxgp6.jpg');
+	background-image: url('/gambar/img/Mountain\ Retreat\ [3840x2160].png');
 	background-repeat: no-repeat;
   	background-size: cover;
   	background-attachment: fixed;
@@ -17,7 +17,7 @@ body {
 	top:8%; /* jarak dari atas */
 	left: 50%; /* posisi horizontal di tengah */
 	transform: translateX(-50%); /* menggeser elemen ke kiri sejauh 50% dari lebar elemen */
-	color: rgb(216, 78, 78);
+	color: rgb(255, 255, 255);
 	background-color: #03b36a;
 	border-radius: 25px;
 	padding: 10px 10px; /* mengatur padding secara vertikal dan horizontal */
@@ -60,7 +60,7 @@ body {
 }
 
 form {
-	background-color: rgba(255, 255, 255, 0.411);
+	background-color: rgba(255, 255, 255, 0.568);
 	text-align: center;
 	width: 340px;
 	height: 530px;
