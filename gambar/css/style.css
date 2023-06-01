@@ -17,8 +17,8 @@ body {
 	top:8%; /* jarak dari atas */
 	left: 50%; /* posisi horizontal di tengah */
 	transform: translateX(-50%); /* menggeser elemen ke kiri sejauh 50% dari lebar elemen */
-	color: rgb(255, 255, 255);
-	background-color: #03b36a;
+	color: rgb(0, 0, 0);
+	background-color: #ffffff;
 	border-radius: 25px;
 	padding: 10px 10px; /* mengatur padding secara vertikal dan horizontal */
 	z-index: 999;
@@ -68,7 +68,7 @@ form {
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 600px;
-	border: 5px solid #00a862;
+	border: 5px solid #181818;
 	padding-top: 10px;
 	padding-right: 35px;
 	padding-left: 35px;
@@ -86,7 +86,7 @@ form {
 .login-content img:hover{
 	border:3px solid #00a862;
 	border-radius: 50em;
-	box-shadow: 0 0 10px 3px  #00994d;
+	box-shadow: 0 0 20px 3px  #00994d;
 }
 .login-content h2 {
 	margin-top: 0;
@@ -112,7 +112,7 @@ form {
 	grid-template-columns: 7% 93%;
 	margin: 19px 0;
 	padding: 3px 0;
-	border-bottom: 2px solid #00a862;
+	border-bottom: 2px solid #000000;
 }
 
 .login-content .input-div.one {
@@ -153,7 +153,7 @@ form {
 	bottom: -2px;
 	width: 0%;
 	height: 2px;
-	background-color: #19b667;
+	background-color: #000000;
 	transition: .4s;
 }
 
@@ -176,7 +176,7 @@ form {
 }
 
 .input-div.focus>.i>i {
-	color: #00af5d;
+	color: #000000;
 }
 
 .input-div>div>input {
@@ -250,7 +250,7 @@ a{
 
 @media screen and (max-width: 1000px) {
 	body {
-		background-image: url("/gambar/img/walpaper.jpg");
+		background-image: url("/gambar/img/919.jpg");
 	}
 	#notification{
 		top: 10%;

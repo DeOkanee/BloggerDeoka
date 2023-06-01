@@ -55,7 +55,31 @@
       type="text/css"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     />
+    <!--audio-->
+    <script>
+      function showNotification() {
+        if ("Notification" in window) {
+          Notification.requestPermission().then(function (permission) {
+            if (permission === "granted") {
+              const notification = new Notification("Play Musik", {
+                body: "Sedang memutar musik...",
+                icon: "path-to-notification-icon.png", // Ganti dengan path gambar ikon notifikasi Anda
+              });
 
+              setTimeout(function () {
+                notification.close();
+              }, 5000);
+            }
+          });
+        }
+      }
+    </script>
+    <!--animasi scroll-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/weeb2/assets/css/animasi scrol.css"
+    />
     <title>Profile De Oka</title>
   </head>
 
@@ -78,44 +102,34 @@
         </div>
       </section>
       <section class="container text-center">
-        <!--audio gif-->
-        <div class="gif">
-          <p>| Fred Punya Musik |</p>
-          <!--AUDIO-->
-          <audio id="Music" src="https://j.top4top.io/m_2653vwanf1.mp3"></audio>
-          <button id="play">🎵</button>
-          <button id="stop">❌</button>
-
-          <script>
-            // Variabel untuk memuat element audio dan tombol
-            const audioElement = document.getElementById("Music");
-            const playButton = document.getElementById("play");
-            const stopButton = document.getElementById("stop");
-
-            // Fungsi untuk memutar musik
-            function playMusic() {
-              audioElement.play();
-            }
-            // Fungsi untuk menghentikan musik
-            function stopMusic() {
-              audioElement.pause();
-              audioElement.currentTime = 0;
-            }
-            // Event listener untuk tombol play
-            playButton.addEventListener("click", playMusic);
-
-            // Event listener untuk tombol stop
-            stopButton.addEventListener("click", stopMusic);
-          </script>
-          <!--AUDIO-->
-          <br />
-          <img src="https://i.postimg.cc/Tw2B9Fz1/a.gif" /><img
-            src="https://i.gifer.com/yB.gif"
+        <!--AUDIO-->
+        <audio id="audio" loop>
+          <source
+            src="https://k.top4top.io/m_27079rsl61.mp3"
+            type="audio/mp3"
           />
-        </div>
-        <br />
+          Your browser does not support the audio element.
+        </audio>
+
+        <button class="musik" id="playButton" onclick="showNotification()">
+          Musick
+        </button>
       </section>
 
+      <script>
+        const audio = document.querySelector("#audio");
+        const playButton = document.querySelector("#playButton");
+
+        playButton.addEventListener("click", function () {
+          if (audio.paused) {
+            audio.play();
+            playButton.textContent = "🎵";
+          } else {
+            audio.pause();
+            playButton.textContent = "❌";
+          }
+        });
+      </script>
       <!--slide foto-->
       <div class="klik">
         <button id="showButton" class="mygalery">My Galery</button>
@@ -241,24 +255,26 @@
                 class="sosial"
                 href="https://www.facebook.com/oka.kembarisna.9"
               >
-                <i class="fab fa-facebook fa-2x"></i>
+                <i id="facebook" class="fab fa-facebook fa-2x"></i>
               </a>
               <a class="sosial" href="https://wa.me/6285738187967">
-                <i class="fab fa-whatsapp fa-2x"></i>
+                <i id="whatsapp" class="fab fa-whatsapp fa-2x"></i>
               </a>
               <a
                 class="sosial"
-                href="https://instagram.com/ini0ka?igshid=MmJiY2I4NDBkZg=="
+                href="https://instagram.com/de_0ka?igshid=NTc4MTIwNjQ2YQ=="
               >
-                <i class="fab fa-instagram fa-2x"></i>
+                <i id="instagram" class="fab fa-instagram fa-2x"></i>
               </a>
               <a class="sosial" href="https://vm.tiktok.com/ZSLR4EKHE/">
-                <i class="fab fa-tiktok fa-2x"></i>
+                <i id="tiktok" class="fab fa-tiktok fa-2x"></i>
               </a>
             </div>
           </div>
         </div>
       </section>
+      <script src="/weeb2/assets/css/scrol.js"></script>
+
       <!-- sosial -->
       <footer>
         <div class="bawah">

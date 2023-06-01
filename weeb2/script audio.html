@@ -1,0 +1,81 @@
+<script>
+  // Variabel untuk memuat element audio dan tombol
+  const audioElement = document.getElementById("Music");
+  const playButton = document.getElementById("play");
+  const stopButton = document.getElementById("stop");
+
+  // Fungsi untuk memutar musik
+  function playMusic() {
+    audioElement.play();
+  }
+  // Fungsi untuk menghentikan musik
+  function stopMusic() {
+    audioElement.pause();
+    audioElement.currentTime = 0;
+  }
+  // Event listener untuk tombol play
+  playButton.addEventListener("click", playMusic);
+
+  // Event listener untuk tombol stop
+  stopButton.addEventListener("click", stopMusic);
+</script>
+<section class="container text-center">
+  <!--audio gif-->
+  <div class="gif">
+    <p>| Fred Punya Musik |</p>
+    <!--AUDIO-->
+    <audio id="Music" src="https://j.top4top.io/m_2653vwanf1.mp3"></audio>
+    <button id="play">🎵</button>
+    <button id="stop">❌</button>
+
+    <!--AUDIO-->
+    <br />
+    <img src="https://i.postimg.cc/Tw2B9Fz1/a.gif" /><img
+      src="https://i.gifer.com/yB.gif"
+    />
+  </div>
+  <br />
+</section>
+<head>
+  <style>
+    #play {
+      font-size: 1rem;
+      background-color: aqua;
+      margin-top: 9px;
+      border-radius: 8px;
+      height: 10%;
+      width: 9%;
+      margin-right: 6px;
+    }
+
+    #stop {
+      background-color: rgb(238, 238, 238);
+      margin-top: 9px;
+      border-radius: 8px;
+      height: 10%;
+      width: 9%;
+      margin-left: 6px;
+    }
+    @media (max-width: 991px) {
+      #play {
+        font-size: calc(1vw + 0.9rem);
+      }
+
+      #stop {
+        font-size: calc(1vw + 0.9rem);
+      }
+    }
+    .gif p {
+      font-size: clamp(16px, 3vw, 20px);
+      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      margin-top: 6px;
+      color: rgb(61, 183, 240);
+      text-align: center;
+    }
+
+    .gif img {
+      height: auto;
+      width: 40%;
+    }
+  </style>
+</head>
